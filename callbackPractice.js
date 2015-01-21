@@ -80,8 +80,15 @@ multiply(4, 3, function(answer){
 
 
 
-
-  //Code Here for contains
+var contains = function(arr, nameToCheck, callback) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === nameToCheck) {
+      var bool = true;
+      continue;
+    }
+  }
+  return callback(bool);
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 contains(names, 'Colt', function(result){
@@ -98,17 +105,25 @@ contains(names, 'Colt', function(result){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
+/*
+!!!!THIS NEEDS TO BE FINISHED!!!!
 
-
-
-    //Code Here for uniq
+var uniq = function(arr, callback) {
+  for (var i = arr.length - 1; i >= 0; i--) {
+    if(arr[i] === arr[i]) {
+      arr.slice[i];
+    }
+  };
+  var newArray = arr
+  return callback(newArray);
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
 
-
+*/
 
 
 
@@ -117,7 +132,11 @@ uniq(names, function(uniqArr){
 
 
 
-    //Code Here for each
+var each = function(arr, callback) {
+  var item = arr[0];
+  var index = 0;
+  return callback(item, index);
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 each(names, function(item, indice){
@@ -133,8 +152,14 @@ each(names, function(item, indice){
 
 
 
-
- //code here for getUserById
+var getUserById = function(arr, idToCheck, callback) {
+  for (var i = 0; i < arr.length; i++) {
+    if(arr[i].id === idToCheck) {
+      var user = users[i];
+    }
+  };
+  return callback(user)
+}
 
 var users = [
   {
