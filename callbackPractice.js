@@ -41,7 +41,10 @@ first(names, function(firstName){
 
 
 
-  //Code Here for last
+var last = function(arr, callback) {
+  var lastName = arr[arr.length - 1];
+  return callback(lastName);
+}
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 last(names, function(lastName){
@@ -59,7 +62,10 @@ last(names, function(lastName){
 
 
 
-  //Code Here for multiply
+var multiply = function(num1, num2, callback) {
+  var prod = num1 * num2;
+  return callback(prod);
+}
 
 multiply(4, 3, function(answer){
   console.log('The answer is ', answer); //should console.log 12
