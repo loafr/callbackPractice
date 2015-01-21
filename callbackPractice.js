@@ -105,25 +105,25 @@ contains(names, 'Colt', function(result){
 
 /* NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM ---- NEXT PROBLEM */
 
-/*
-!!!!THIS NEEDS TO BE FINISHED!!!!
+
+
 
 var uniq = function(arr, callback) {
-  for (var i = arr.length - 1; i >= 0; i--) {
-    if(arr[i] === arr[i]) {
-      arr.slice[i];
-    }
-  };
-  var newArray = arr
+  var newArray = [];
+for (var i = arr.length - 1; i >= 0; i--) {
+  if(newArray.indexOf(arr[i]) < 0 ) {
+    newArray.push(arr[i])
+  }
+ }
   return callback(newArray);
-}
+};
 
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 uniq(names, function(uniqArr){
   console.log('The new names array with all the duplicate items removed is ', uniqArr);
 });
 
-*/
+
 
 
 
