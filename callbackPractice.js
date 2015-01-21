@@ -7,7 +7,7 @@ Below is a sample problem
       alert(thingToSay);
    });
    
-
+ 
 and what you should write is the favNum function that makes the code above work, 
     
     
@@ -24,7 +24,10 @@ and what you should write is the favNum function that makes the code above work,
 
 
 
-  //Code Here for first
+var first = function(arr, callback){
+  var firstName = arr[0];
+  return callback(firstName);
+}
   
 var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan'];
 first(names, function(firstName){
